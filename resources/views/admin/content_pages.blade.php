@@ -28,8 +28,9 @@
         		
         		<td>
 	        		{!! Form::open(['url'=>route('pages_edit',['page'=>$page->id]), 'class'=>'form-horizontal','method' => 'POST']) !!}
-	        			
-	        			{!! Form::hidden('action','delete') !!}
+	        			{{ method_field('DELETE') }}
+                    {{--<input type="hidden" name="_method" value="DELETE">--}}
+	        			{{--{!! Form::hidden('_method','delete') !!}--}}
 	        			{!! Form::button('Удалить',['class'=>'btn btn-danger','type'=>'submit']) !!}
 	        			
 	        		{!! Form::close() !!}
